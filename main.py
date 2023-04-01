@@ -89,31 +89,31 @@ def about():
 
 
 # админка
-# @app.route('/db-edit', methods=['POST', 'GET'])
-# def dbedit():
-#     if request.method == 'POST':
-#         area = null_check(request.form['area'])
-#         number = null_check(request.form['number'])
-#         title = null_check(request.form['title'])
-#         intro = null_check(request.form['intro'])
-#         inbound = request.form['inbound']
-#         outbound = request.form['outbound']
-#         article = Article(area=area, number=number, title=title, intro=intro, inbound=inbound, outbound=outbound)
-#
-#         try:
-#             db.session.add(article)
-#             db.session.commit()
-#             return redirect('/db-edit')
-#         except:
-#             return "При добавлении статьи произошла ошибка"
-#     else:
-#         return render_template('db-edit.html')
+@app.route('/db-edit', methods=['POST', 'GET'])
+def dbedit():
+    if request.method == 'POST':
+        area = null_check(request.form['area'])
+        number = null_check(request.form['number'])
+        title = null_check(request.form['title'])
+        intro = null_check(request.form['intro'])
+        inbound = request.form['inbound']
+        outbound = request.form['outbound']
+        article = Article(area=area, number=number, title=title, intro=intro, inbound=inbound, outbound=outbound)
+
+        try:
+            db.session.add(article)
+            db.session.commit()
+            return redirect('/db-edit')
+        except:
+            return "При добавлении статьи произошла ошибка"
+    else:
+        return render_template('db-edit.html')
 
 
-# @app.route('/db-all')
-# def db_all():
-#     articles = Article.query.order_by(Article.id.desc()).all()
-#     return render_template('db_area_list_full.html', articles=articles)
+@app.route('/db-all')
+def db_all():
+    articles = Article.query.order_by(Article.id.desc()).all()
+    return render_template('db_area_list_full.html', articles=articles)
 
 @app.route('/', methods=['POST', 'GET'])
 def home():
