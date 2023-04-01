@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+
+{% block header %}
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header style="padding-bottom: 100px;">
+    <div>
+      <h3 class="float-md-start mb-0">Нумерология</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="/">Главная</a>
+        <a class="nav-link fw-bold py-1 px-0" href="/about">О проекте</a>
+        <a class="nav-link fw-bold py-1 px-0 active" href="/database">База Данных</a>
+      </nav>
+    </div>
+  </header>
+{% endblock%}
+
+{% block title%}
+Детали
+{% endblock%}
+
+{% block body %}
+{% for el in articles %}
+
+    <div class="alert alert-light" style="text-align: left;">
+        <p>{{ el.area }}</p>
+        <h4>{{ el.number }}: {{ el.title }}</h4>
+        <p>{{ el.intro }}</p>
+        <p>{{ el.description }}</p>
+        <p>{{ el.inbound }}</p>
+        <p>{{ el.outbound }}</p>
+        <a href="/database/{{el.id}}/del" class="btn btn-danger fw-bold">Удалить</a>
+        <a href="/database/{{el.id}}/update" class="btn btn-secondary fw-bold">Редактировать</a>
+    </div>
+
+    {% endfor %}
+{% endblock%}

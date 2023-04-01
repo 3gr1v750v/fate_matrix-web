@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+
+{% block header %}
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div>
+      <h3 class="float-md-start mb-0">Нумерология</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="/">Главная</a>
+        <a class="nav-link fw-bold py-1 px-0" href="/about">О проекте</a>
+        <a class="nav-link fw-bold py-1 px-0" href="/database">База Данных</a>
+      </nav>
+    </div>
+  </header>
+{% endblock%}
+
+{% block title%}
+Главная страница
+{% endblock%}
+
+{% block body %}
+<h1>Матрица Судьбы</h1>
+    <p class="lead">Матрица судьбы – это метод самопознания человека. Он рассказывает о заложенном от рождения потенциале человека.</br> Чтобы начать, введите дату своего рождения.</p>
+    <p class="lead">
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <form method="post" class="d-flex mt-3 mt-lg-0">
+              <input type="date" class="form-control me-2" style="width: 165px;" id="birthday" name="birthday" required>
+            <!--<input class="form-control me-2" type="text" name="title" id="title" value="01.01.1990" placeholder="01.01.1990" required>-->
+              <input type="submit" class="btn btn-secondary fw-bold " value="Начать!">
+          </form>
+      </div>
+    </p>
+{% endblock%}

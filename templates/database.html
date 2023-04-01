@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+
+{% block title%}
+База данных
+{% endblock%}
+
+{% block header %}
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header style="padding-bottom: 50px;">
+    <div>
+      <h3 class="float-md-start mb-0">Нумерология</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="/">Главная</a>
+        <a class="nav-link fw-bold py-1 px-0" href="/about">О проекте</a>
+        <a class="nav-link fw-bold py-1 px-0 active" href="/database">База Данных</a>
+      </nav>
+    </div>
+  </header>
+{% endblock%}
+
+{% block body %}
+    <div class="d-flex justify-content-center" style="padding-bottom: 50px;">
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 border-bottom" >
+        <li><a href="/csv" download="dump.csv" class="nav-link px-2 link-secondary">Скачать все записи в CSV формате</a></li>
+      </ul>
+    </div>
+<div class="row row-cols-sm-1 g-4" style="text-align: left;">
+    <a class="nav-link py-1 px-0" href="/database/finance">
+      <div class="col d-flex align-items-start" >
+          <img src="static/braces.svg" class="bi text-muted flex-shrink-0 me-3" width="32" height="32">
+        <div>
+          <h4 class="fw-bold mb-0">Линия денежного канала</h4>
+          <p>Описание сфер и талантов, через которые проходят деньги</p>
+        </div>
+      </div>
+    </a>
+    <a class="nav-link py-1 px-0" href="#">
+      <div class="col d-flex align-items-start">
+          <img src="static/braces.svg" class="bi text-muted flex-shrink-0 me-3" width="32" height="32">
+        <div>
+          <h4 class="fw-bold mb-0">Линия отношений</h4>
+          <p>Описание развития отношений и совместимости партнеров.</p>
+        </div>
+      </div>
+        </a>
+    <a class="nav-link py-1 px-0" href="#">
+      <div class="col d-flex align-items-start">
+          <img src="static/braces.svg" class="bi text-muted flex-shrink-0 me-3" width="32" height="32">
+        <div>
+          <h4 class="fw-bold mb-0">Личное предназначение</h4>
+          <p>Описание областей работы над собой.</p>
+        </div>
+      </div>
+        </a>
+    <a class="nav-link py-1 px-0" href="#">
+    <div class="col d-flex align-items-start">
+        <img src="static/braces.svg" class="bi text-muted flex-shrink-0 me-3" width="32" height="32">
+        <div>
+          <h4 class="fw-bold mb-0">Социальное предназначение</h4>
+          <p>Описание реализации в обществе и социальной пользы</p>
+        </div>
+      </div>
+    </div>
+    </a>
+{% endblock%}

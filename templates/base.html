@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru" class="adaptive">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!--  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+    <meta name="theme-color" content="#712cf9">
+    <link href="/static/styles.css" rel="stylesheet">
+   <title>{% block title%}{% endblock%}</title>
+</head>
+  <body class="d-flex h-100 text-center">
+
+  {% block header %} {% endblock%}
+
+
+  <main class="px-3">
+    {% block body %} {% endblock%}
+  </main>
+
+
+  <footer class="mt-auto">
+    <p>Группа VK <a href="https://vk.com/numerology" class="text-black">Нумерология</a>, Инстаграм <a href="/" class="text-black">@olesya_behappy</a>.</p>
+  </footer>
+</div>
+  </body>
+</html>

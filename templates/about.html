@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header style="padding-bottom: 50px;">
+    <div>
+      <h3 class="float-md-start mb-0">Нумерология</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="/">Главная</a>
+        <a class="nav-link fw-bold py-1 px-0 active" href="/about">О проекте</a>
+        <a class="nav-link fw-bold py-1 px-0" href="/database">База Данных</a>
+      </nav>
+    </div>
+  </header>
+{% endblock%}
+
+{% block title%}
+О проекте
+{% endblock%}
+
+{% block body %}
+
+  <h1>О проекте</h1>
+    <p class="lead" style="text-align: left;">
+<br>Данный веб-сайт является демонстрационной версией решения для автоматизации Нумерологических расчётов и составления описания Матрицы Судьбы на основе результатов вычислений.<br>
+<br>Ограничения демонстрационной версии:<br>
+      - База данных ограничена одним разделом<br>
+      - Оригинальный контент в базе данных заменен 'текстовыми вставками'<br>
+<br>
+Стек технологий:<br>
+      - Python<br>
+      - Famework: Flask<br>
+      - База данных: SQLite<br>
+      - HTML/CSS: Bootstrap (измененный)<br><br></p>
+<div class="container px-5">
+</div>
+
+<!--  <a href="static/site_plan.png">-->
+<!--  <img src="static/site_plan.png" class="img-fluid mb-4" alt="Example image" width="763" loading="lazy">-->
+<!--  </a>-->
+{% endblock%}

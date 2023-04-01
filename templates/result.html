@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+
+{% block title%}
+Результат
+{% endblock%}
+
+{% block header %}
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header style="padding-bottom: 50px;">
+    <div>
+      <h3 class="float-md-start mb-0">Нумерология</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="/">Главная</a>
+        <a class="nav-link fw-bold py-1 px-0" href="/about">О проекте</a>
+        <a class="nav-link fw-bold py-1 px-0" href="/database">База Данных</a>
+      </nav>
+    </div>
+  </header>
+{% endblock%}
+
+{% block body %}
+<div class="container px-5">
+        <!--<img src="/static/matrix_image_output.png" class="img-fluid mb-4" alt="Example image" width="550" loading="lazy">
+</div>-->
+    <img src="data:image/png;base64,{{ img_data }}" class="img-fluid mb-4" alt="Example image" width="550" loading="lazy">
+</div>
+<h1>Матрица Судьбы</h1>
+
+<div class="d-flex justify-content-center" style="padding-bottom: 50px; padding-top: 20px;">
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 border-bottom" >
+        <li><a href="/static/destiny_matrix.pdf" download="system.pdf" class="nav-link px-2 link-secondary">Скачать PDF с подробным описанием</a></li>
+          </ul>
+    </div>
+{% endblock%}

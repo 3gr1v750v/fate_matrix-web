@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+
+{% block header %}
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header style="padding-bottom: 100px;">
+    <div>
+      <h3 class="float-md-start mb-0">Нумерология</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="/">Главная</a>
+        <a class="nav-link fw-bold py-1 px-0" href="/about">О проекте</a>
+        <a class="nav-link fw-bold py-1 px-0 active" href="/database">База Данных</a>
+      </nav>
+    </div>
+  </header>
+{% endblock%}
+
+{% block body %}
+    <h3>Редактировать запись</h3><br>
+    <form method="post">
+        <input type="number" name="number" id="number" class="form-control" value={{article.number}} placeholder="Введите референсное число"><br>
+       <!-- <input type="text" name="title" id="title" class="form-control" value={{article.title}} placeholder="Введите заголовок"><br>-->
+        <textarea name="title" id="title" class="form-control"  placeholder="Введите заголовок">{{article.title}}</textarea><br>
+        <textarea name="intro" id="intro" class="form-control"  placeholder="Введине описание">{{article.intro}}</textarea><br>
+        <textarea name="inbound" id="inbound" class="form-control" placeholder="Введите тект описания входа потока">{{article.inbound}}</textarea><br>
+        <textarea name="outbound" id="outbound" class="form-control" placeholder="Введите тект описания выхода потока">{{article.outbound}}</textarea><br>
+        <input type="submit" class="btn btn-secondary fw-bold" value="Редактировать"></input>
+    </form>
+{% endblock%}
