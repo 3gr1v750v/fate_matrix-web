@@ -20,7 +20,7 @@
 1. Скопируйте репозиторий и перейдите в него в командной строке:
 
 ```
-git clone https://https://github.com/EugeniGrivtsov/fate_matrix-web
+git clone https://https://github.com/3gr1v750v/fate_matrix-web
 ```
 
 ```
